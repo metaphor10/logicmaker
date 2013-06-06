@@ -16,6 +16,14 @@
 		42676B5A1756E11400DF5ABA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42676B591756E11400DF5ABA /* Default.png */; };
 		42676B5C1756E11400DF5ABA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42676B5B1756E11400DF5ABA /* Default@2x.png */; };
 		42676B5E1756E11400DF5ABA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42676B5D1756E11400DF5ABA /* Default-568h@2x.png */; };
+		42676B661756E5E000DF5ABA /* AB1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42676B651756E5E000DF5ABA /* AB1ViewController.m */; };
+		42676B691756E9CF00DF5ABA /* AB1DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42676B681756E9CF00DF5ABA /* AB1DrawView.m */; };
+		42676B6C1756EB1F00DF5ABA /* AB1ComponentPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 42676B6B1756EB1F00DF5ABA /* AB1ComponentPicker.m */; };
+		42676B6F1756EB6400DF5ABA /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 42676B6E1756EB6400DF5ABA /* BNRItemStore.m */; };
+		4293D3391758FD8F00B75D10 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293D3381758FD8F00B75D10 /* CoreData.framework */; };
+		4293D33D1758FDF100B75D10 /* Logickaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4293D33B1758FDF100B75D10 /* Logickaker.xcdatamodeld */; };
+		4293D3431759086100B75D10 /* AB1ComponentCircuit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4293D3421759086100B75D10 /* AB1ComponentCircuit.m */; };
+		4293D34517590CF900B75D10 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293D34417590CF900B75D10 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,19 @@
 		42676B591756E11400DF5ABA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		42676B5B1756E11400DF5ABA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		42676B5D1756E11400DF5ABA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		42676B641756E5AD00DF5ABA /* AB1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AB1ViewController.h; sourceTree = "<group>"; };
+		42676B651756E5E000DF5ABA /* AB1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AB1ViewController.m; sourceTree = "<group>"; };
+		42676B671756E9B900DF5ABA /* AB1DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AB1DrawView.h; sourceTree = "<group>"; };
+		42676B681756E9CF00DF5ABA /* AB1DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AB1DrawView.m; sourceTree = "<group>"; };
+		42676B6A1756EB1F00DF5ABA /* AB1ComponentPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AB1ComponentPicker.h; sourceTree = "<group>"; };
+		42676B6B1756EB1F00DF5ABA /* AB1ComponentPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AB1ComponentPicker.m; sourceTree = "<group>"; };
+		42676B6D1756EB6400DF5ABA /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		42676B6E1756EB6400DF5ABA /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		4293D3381758FD8F00B75D10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4293D33C1758FDF100B75D10 /* Logickaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logickaker.xcdatamodel; sourceTree = "<group>"; };
+		4293D3411759086100B75D10 /* AB1ComponentCircuit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AB1ComponentCircuit.h; sourceTree = "<group>"; };
+		4293D3421759086100B75D10 /* AB1ComponentCircuit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AB1ComponentCircuit.m; sourceTree = "<group>"; };
+		4293D34417590CF900B75D10 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4293D34517590CF900B75D10 /* QuartzCore.framework in Frameworks */,
+				4293D3391758FD8F00B75D10 /* CoreData.framework in Frameworks */,
 				42676B481756E11400DF5ABA /* UIKit.framework in Frameworks */,
 				42676B4A1756E11400DF5ABA /* Foundation.framework in Frameworks */,
 				42676B4C1756E11400DF5ABA /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +74,10 @@
 		42676B381756E11400DF5ABA = {
 			isa = PBXGroup;
 			children = (
+				4293D34417590CF900B75D10 /* QuartzCore.framework */,
+				4293D3411759086100B75D10 /* AB1ComponentCircuit.h */,
+				4293D3421759086100B75D10 /* AB1ComponentCircuit.m */,
+				4293D3381758FD8F00B75D10 /* CoreData.framework */,
 				42676B4D1756E11400DF5ABA /* Logickaker */,
 				42676B461756E11400DF5ABA /* Frameworks */,
 				42676B441756E11400DF5ABA /* Products */,
@@ -78,9 +105,18 @@
 		42676B4D1756E11400DF5ABA /* Logickaker */ = {
 			isa = PBXGroup;
 			children = (
+				42676B681756E9CF00DF5ABA /* AB1DrawView.m */,
+				42676B671756E9B900DF5ABA /* AB1DrawView.h */,
 				42676B561756E11400DF5ABA /* AB1AppDelegate.h */,
 				42676B571756E11400DF5ABA /* AB1AppDelegate.m */,
+				42676B651756E5E000DF5ABA /* AB1ViewController.m */,
+				42676B6D1756EB6400DF5ABA /* BNRItemStore.h */,
+				42676B6E1756EB6400DF5ABA /* BNRItemStore.m */,
+				42676B6A1756EB1F00DF5ABA /* AB1ComponentPicker.h */,
+				42676B6B1756EB1F00DF5ABA /* AB1ComponentPicker.m */,
+				42676B641756E5AD00DF5ABA /* AB1ViewController.h */,
 				42676B4E1756E11400DF5ABA /* Supporting Files */,
+				4293D33B1758FDF100B75D10 /* Logickaker.xcdatamodeld */,
 			);
 			path = Logickaker;
 			sourceTree = "<group>";
@@ -167,6 +203,12 @@
 			files = (
 				42676B541756E11400DF5ABA /* main.m in Sources */,
 				42676B581756E11400DF5ABA /* AB1AppDelegate.m in Sources */,
+				42676B661756E5E000DF5ABA /* AB1ViewController.m in Sources */,
+				42676B691756E9CF00DF5ABA /* AB1DrawView.m in Sources */,
+				42676B6C1756EB1F00DF5ABA /* AB1ComponentPicker.m in Sources */,
+				42676B6F1756EB6400DF5ABA /* BNRItemStore.m in Sources */,
+				4293D33D1758FDF100B75D10 /* Logickaker.xcdatamodeld in Sources */,
+				4293D3431759086100B75D10 /* AB1ComponentCircuit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +317,22 @@
 				42676B631756E11400DF5ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4293D33B1758FDF100B75D10 /* Logickaker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4293D33C1758FDF100B75D10 /* Logickaker.xcdatamodel */,
+			);
+			currentVersion = 4293D33C1758FDF100B75D10 /* Logickaker.xcdatamodel */;
+			path = Logickaker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42676B3A1756E11400DF5ABA /* Project object */;
 }

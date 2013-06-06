@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63b" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AB1ComponentCircuit" representedClassName="AB1ComponentCircuit" syncable="YES">
+        <attribute name="bits" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="description1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="highlighted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderingvalue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="xcoor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ycoor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="assetType" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AB1ComponentType" inverseName="items" inverseEntity="AB1ComponentType" syncable="YES"/>
+    </entity>
+    <entity name="AB1ComponentType" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AB1ComponentCircuit" inverseName="assetType" inverseEntity="AB1ComponentCircuit" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AB1ComponentCircuit" positionX="160" positionY="192" width="128" height="210"/>
+        <element name="AB1ComponentType" positionX="160" positionY="192" width="128" height="75"/>
+    </elements>
+</model>

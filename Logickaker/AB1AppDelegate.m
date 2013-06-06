@@ -2,7 +2,7 @@
 //  AB1AppDelegate.m
 //  Logickaker
 //
-//  Created by Michael Black on 5/29/13.
+//  Created by Ariel Borochov on 5/29/13.
 //  Copyright (c) 2013 American University. All rights reserved.
 //
 
@@ -13,7 +13,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CGRect screenRect = [[self window] bounds];
+    
     // Override point for customization after application launch.
+    CGRect bigRect=screenRect;
+    bigRect.size.width*=2;
+    bigRect.size.width*=2;
+    AB1ViewController *abc=[[AB1ViewController alloc]init];
+    //Josh scrollView suggestion
+    
+    
+    
+    
+    
+    
+    
+    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:abc];
+    
+    [[self window]setRootViewController:navController];
+    
+    
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
