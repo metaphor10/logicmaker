@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4259572D1762C88D0060F004 /* AB1ComponentCircuit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259572C1762C88D0060F004 /* AB1ComponentCircuit.m */; };
 		42676B481756E11400DF5ABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42676B471756E11400DF5ABA /* UIKit.framework */; };
 		42676B4A1756E11400DF5ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42676B491756E11400DF5ABA /* Foundation.framework */; };
 		42676B4C1756E11400DF5ABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42676B4B1756E11400DF5ABA /* CoreGraphics.framework */; };
@@ -22,11 +23,12 @@
 		42676B6F1756EB6400DF5ABA /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 42676B6E1756EB6400DF5ABA /* BNRItemStore.m */; };
 		4293D3391758FD8F00B75D10 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293D3381758FD8F00B75D10 /* CoreData.framework */; };
 		4293D33D1758FDF100B75D10 /* Logickaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4293D33B1758FDF100B75D10 /* Logickaker.xcdatamodeld */; };
-		4293D3431759086100B75D10 /* AB1ComponentCircuit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4293D3421759086100B75D10 /* AB1ComponentCircuit.m */; };
 		4293D34517590CF900B75D10 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293D34417590CF900B75D10 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4259572B1762C88D0060F004 /* AB1ComponentCircuit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AB1ComponentCircuit.h; sourceTree = "<group>"; };
+		4259572C1762C88D0060F004 /* AB1ComponentCircuit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AB1ComponentCircuit.m; sourceTree = "<group>"; };
 		42676B431756E11400DF5ABA /* Logickaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logickaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42676B471756E11400DF5ABA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42676B491756E11400DF5ABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +52,6 @@
 		42676B6E1756EB6400DF5ABA /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 		4293D3381758FD8F00B75D10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4293D33C1758FDF100B75D10 /* Logickaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logickaker.xcdatamodel; sourceTree = "<group>"; };
-		4293D3411759086100B75D10 /* AB1ComponentCircuit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AB1ComponentCircuit.h; sourceTree = "<group>"; };
-		4293D3421759086100B75D10 /* AB1ComponentCircuit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AB1ComponentCircuit.m; sourceTree = "<group>"; };
 		4293D34417590CF900B75D10 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -74,9 +74,9 @@
 		42676B381756E11400DF5ABA = {
 			isa = PBXGroup;
 			children = (
+				4259572B1762C88D0060F004 /* AB1ComponentCircuit.h */,
+				4259572C1762C88D0060F004 /* AB1ComponentCircuit.m */,
 				4293D34417590CF900B75D10 /* QuartzCore.framework */,
-				4293D3411759086100B75D10 /* AB1ComponentCircuit.h */,
-				4293D3421759086100B75D10 /* AB1ComponentCircuit.m */,
 				4293D3381758FD8F00B75D10 /* CoreData.framework */,
 				42676B4D1756E11400DF5ABA /* Logickaker */,
 				42676B461756E11400DF5ABA /* Frameworks */,
@@ -208,7 +208,7 @@
 				42676B6C1756EB1F00DF5ABA /* AB1ComponentPicker.m in Sources */,
 				42676B6F1756EB6400DF5ABA /* BNRItemStore.m in Sources */,
 				4293D33D1758FDF100B75D10 /* Logickaker.xcdatamodeld in Sources */,
-				4293D3431759086100B75D10 /* AB1ComponentCircuit.m in Sources */,
+				4259572D1762C88D0060F004 /* AB1ComponentCircuit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
