@@ -343,6 +343,14 @@
                                              inManagedObjectContext:context];
         [type setValue:@"Shift-right" forKey:@"label"];
         [allAssetTypes addObject:type];
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"AB1ComponentType"
+                                             inManagedObjectContext:context];
+        [type setValue:@"Memory" forKey:@"label"];
+        [allAssetTypes addObject:type];
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"AB1ComponentType"
+                                             inManagedObjectContext:context];
+        [type setValue:@"Ports" forKey:@"label"];
+        [allAssetTypes addObject:type];
         
         
         
@@ -360,13 +368,6 @@
 {
     return currentAssetType;
 }
--(Boolean)getIsOutOfScrollView
-{
-    return isOutOfScrollView;
-}
--(Boolean)setIsOutOfScrollView:(Boolean)state1
-{
-    isOutOfScrollView=state1;
-}
+
 
 @end

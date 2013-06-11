@@ -42,6 +42,6 @@
 - (void)loadAllItems;
 -(void)SetcurrentAssetType:(NSManagedObject *)assetTypeCurrent;
 -(NSManagedObject *)getCurrentAssetType;
--(Boolean)getIsOutOfScrollView;
+
 
 @end

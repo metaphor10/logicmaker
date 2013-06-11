@@ -95,15 +95,94 @@
             // Draw them with a 2.0 stroke width so they are a bit more visible.
             CGContextSetLineWidth(context, 2.0);
             
-            CGContextMoveToPoint(context, t.xcoor, t.ycoor);
-            CGContextAddLineToPoint(context, t.xcoor+20, t.ycoor);
-            CGContextAddLineToPoint(context, t.xcoor+20, t.ycoor+10);
-            CGContextAddLineToPoint(context, t.xcoor, t.ycoor+10);
+           /* CGContextMoveToPoint(context, t.xcoor, t.ycoor);
+            CGContextAddLineToPoint(context, t.xcoor2, t.ycoor);
+            CGContextAddLineToPoint(context, t.xcoor2, t.ycoor2);
+            CGContextAddLineToPoint(context, t.xcoor, t.ycoor2);
+            
             CGContextClosePath(context);
+            
             CGContextFillPath(context);
             
-        }else{
+            CGContextMoveToPoint(context, t.xcoor, t.ycoor);
+            CGContextAddLineToPoint(context, t.xcoor2, t.ycoor);
+            CGContextAddLineToPoint(context, t.xcoor2, t.ycoor2);
+            CGContextAddLineToPoint(context, t.xcoor, t.ycoor2);
+            CGContextClosePath(context);
+            CGContextStrokePath(context);*/
+            CGRect register1=CGRectMake(t.xcoor, t.ycoor, XSIZE, YSIZE);
+            CGContextStrokeRect(context, register1);
+            CGContextFillRect(context, register1);
+        }else if([[t assetType]valueForKey:@"label"]==@"Lookup table"){
+            //according to plan
+            UIColor *background=[UIColor whiteColor];
+            CGColorRef color=[background CGColor];
+            CGContextSetFillColorWithColor(context, color);
+            CGRect register1=CGRectMake(t.xcoor, t.ycoor, XSIZE, YSIZE);
             
+            CGContextStrokeRect(context, register1);
+            
+            CGContextFillRect(context, register1);
+            CGContextMoveToPoint(context, t.xcoor+5, t.ycoor+(t.ycoor2-t.ycoor)/4);
+            CGContextAddLineToPoint(context, t.xcoor+(t.xcoor2-t.xcoor)-5, t.ycoor+(t.ycoor2-t.ycoor)/4);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, t.xcoor+(t.xcoor2-t.xcoor)/2, t.ycoor+(t.ycoor2-t.ycoor)/4);
+            CGContextAddLineToPoint(context, t.xcoor+(t.xcoor2-t.xcoor)/2, t.ycoor+(t.ycoor2-t.ycoor)-(t.ycoor2-t.ycoor)/4);
+            CGContextStrokePath(context);
+        }else if([[t assetType]valueForKey:@"label"]==@"ALU"||[[t assetType]valueForKey:@"label"]==@"Adder"||[[t assetType]valueForKey:@"label"]==@"Combinational-adder"||[[t assetType]valueForKey:@"label"]==@"Equal-to"||[[t assetType]valueForKey:@"label"]==@"Less-then"||[[t assetType]valueForKey:@"label"]==@"Shift-left"||[[t assetType]valueForKey:@"label"]==@"Shift-right"){
+            int x=t.xcoor+(t.xcoor2-t.xcoor)/2,y=t.ycoor+(t.ycoor2-t.ycoor)/2;
+            CGContextMoveToPoint(context, x-(t.xcoor2-t.xcoor)/2, y-(t.ycoor2-t.ycoor)/2);
+            CGContextAddLineToPoint(context, x-(t.xcoor2-t.xcoor)/2+(t.xcoor2-t.xcoor)/5, y+(t.ycoor2-t.ycoor)/2);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, x+(t.xcoor2-t.xcoor)/2, y-(t.ycoor2-t.ycoor)/2);
+            CGContextAddLineToPoint(context, x+(t.xcoor2-t.xcoor)/2-(t.xcoor2-t.xcoor)/5, y+(t.ycoor2-t.ycoor)/2);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, x-(t.xcoor2-t.xcoor)/2+(t.xcoor2-t.xcoor)/5, y+(t.ycoor2-t.ycoor)/2);
+            
+            CGContextAddLineToPoint(context, x+(t.xcoor2-t.xcoor)/2-(t.xcoor2-t.xcoor)/5, y+(t.ycoor2-t.ycoor)/2);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, x-(t.xcoor2-t.xcoor)/8, y-(t.ycoor2-t.ycoor)/2);
+            CGContextAddLineToPoint(context, x, y-(t.ycoor2-t.ycoor)/3);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, x+(t.xcoor2-t.xcoor)/8, y-(t.ycoor2-t.ycoor)/2);
+            CGContextAddLineToPoint(context, x, y-(t.ycoor2-t.ycoor)/3);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, x-(t.xcoor2-t.xcoor)/2, y-(t.ycoor2-t.ycoor)/2);
+            CGContextAddLineToPoint(context, x-(t.xcoor2-t.xcoor)/8, y-(t.ycoor2-t.ycoor)/2);
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, x+(t.xcoor2-t.xcoor)/2, y-(t.ycoor2-t.ycoor)/2);
+            CGContextAddLineToPoint(context, x+(t.xcoor2-t.xcoor)/8, y-(t.ycoor2-t.ycoor)/2);
+            CGContextStrokePath(context);
+            
+            
+        }else if ([[t assetType]valueForKey:@"label"]==@"Memory" || [[t assetType]valueForKey:@"label"]==@"Ports" || [[t assetType]valueForKey:@"label"]==@"Register file")
+        {
+            CGRect register1=CGRectMake(t.xcoor, t.ycoor,t.xcoor2-t.xcoor , t.ycoor2-t.ycoor );
+            CGContextStrokeRect(context, register1);
+            if ([[t assetType]valueForKey:@"label"]==@"Register file") {
+                CGContextSetRGBFillColor(context, .90,.90,1,1);
+                CGContextFillRect(context, register1);
+            }else if ([[t assetType]valueForKey:@"label"]==@"Memory")
+            {
+                CGContextSetRGBFillColor(context, 1,.90,1,1);
+                CGContextFillRect(context, register1);
+            }else if ([[t assetType]valueForKey:@"label"]==@"Ports")
+            {
+                CGContextSetRGBFillColor(context, .90,1,.95,1);
+                CGContextFillRect(context, register1);
+                CGContextMoveToPoint(context, t.xcoor, t.ycoor+(t.ycoor2-t.ycoor)/3);
+                CGContextAddLineToPoint(context, t.xcoor+(t.xcoor2-t.xcoor), t.ycoor+(t.ycoor2-t.ycoor)/3);
+                CGContextMoveToPoint(context, t.xcoor, t.ycoor+2*(t.ycoor2-t.ycoor)/3);
+                CGContextAddLineToPoint(context, t.xcoor+(t.xcoor2-t.xcoor), t.ycoor+2*(t.ycoor2-t.ycoor)/3);
+                CGContextStrokePath(context);
+                
+                
+            }
+        }else if ([[t assetType]valueForKey:@"label"]==@"Extender" || [[t assetType]valueForKey:@"label"]==@"Inhibitor")
+        {
+            CGContextAddEllipseInRect(context, CGRectMake(t.xcoor, t.ycoor,t.xcoor2-t.xcoor, t.ycoor2-t.ycoor));
+            CGContextStrokePath(context);
+
         }
         
         
@@ -134,52 +213,57 @@
     NSLog(@"tap");
     if ([[BNRItemStore sharedStore]getCurrentAssetType]!=nil)
     {
-        NSLog(@"Not choosen");
+        
         AB1ComponentCircuit *component = [[BNRItemStore sharedStore]createItem];
         
         struct CGPoint g=[gr locationInView:self];
         component.xcoor=g.x;
         component.ycoor=g.y;
         component.assetType=[[BNRItemStore sharedStore]getCurrentAssetType];
+        int x=XSIZE;
+        int y=YSIZE;
+        NSString *type=[[component assetType]valueForKey:@"label"];
+        if (type==@"Register"||type==@"Lookup table"|| type==@"Adder" || type ==@"Register file" || type==@"Memory" || type == @"Ports")
+        {
+            component.xcoor2=g.x+x;
+            component.ycoor2=g.y+y;
+        }else if (type==@"Decoder")
+        {
+            component.xcoor2=g.x+x;
+            component.ycoor2=g.y+y/2;
+            if (pow(2, component.bits)*3>x) {
+                component.xcoor2=g.x+(int)(pow(2, component.bits)*3);
+                
+            }
+        }else if (type==@"Flag"||type==@"Constant")
+        {
+            component.xcoor2=g.x+x/2;
+            component.ycoor2=g.y+y/2;
+        }else if (type==@"Splitter"||type==@"Joiner")
+        {
+            component.xcoor2=g.x+x;
+            component.ycoor2=g.y+y/3;
+        }else if (type==@"Input pin"||type==@"Output pin")
+        {
+            component.xcoor2=g.x+x/3;
+            component.ycoor2=g.y+y/3;
+        }else if (type==@"Not"||type==@"Negate")
+        {
+            component.xcoor2=g.x+x/2;
+            component.ycoor2=g.y+y/2;
+        }else{
+            component.xcoor2=g.x+x;
+            component.ycoor2=g.y+y/2;        }
+        
+        
+        
+        
+        
     }
     
     
     
-    //CGContextRef context = UIGraphicsGetCurrentContext();
-    //CGContextSetLineWidth(context, 1.0);
     
-    
-    /*
-    CALayer *boxLayer = [[CALayer alloc]init];
-   
-    // Drawing code
-    //create a new layer
-    boxLayer = [[CALayer alloc]init];
-    //give it a size
-    [boxLayer setBounds:CGRectMake(0.0, 0.0, 85.0, 85.0)];
-    //give it a location
-     point=[gr locationInView:self];
-    [boxLayer setPosition:point];
-    //make half transperent red the background
-    UIColor *reddish=[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    //get CGColor object with the same color
-    CGColorRef cgReddish=[reddish CGColor];
-    //Set background of the rect
-    [boxLayer setBackgroundColor:cgReddish];
-    //create an image file
-    
-    UIImage *layerImage=[UIImage imageNamed:@"and.png"];
-    //get the underlaying CGImage
-    CGImageRef image=[layerImage CGImage];
-    //put the image on the layer
-    [boxLayer setContents:(__bridge id)image];
-    //inset the image a bit from each side
-    [boxLayer setContentsRect:CGRectMake(-0.1, -0.1, 1.2, 1.2)];
-    //let the image resize (without changing the aspect ration)
-    [boxLayer setContentsGravity:kCAGravityResizeAspect];
-    //add the box layer to the array of items on the screen
-    [boxesOnScreen addObject:boxLayer];
-    */
     [self setNeedsDisplay];
     
 

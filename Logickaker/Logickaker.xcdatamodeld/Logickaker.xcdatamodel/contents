@@ -10,15 +10,17 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="xcoor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="xcoor2" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="ycoor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ycoor2" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="assetType" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AB1ComponentType" inverseName="items" inverseEntity="AB1ComponentType" syncable="YES"/>
     </entity>
-    <entity name="AB1ComponentType" syncable="YES">
+    <entity name="AB1ComponentType" representedClassName="AB1ComponentType" syncable="YES">
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AB1ComponentCircuit" inverseName="assetType" inverseEntity="AB1ComponentCircuit" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AB1ComponentCircuit" positionX="160" positionY="192" width="128" height="210"/>
-        <element name="AB1ComponentType" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="AB1ComponentCircuit" positionX="160" positionY="192" width="128" height="240"/>
+        <element name="AB1ComponentType" positionX="376" positionY="225" width="128" height="75"/>
     </elements>
 </model>
